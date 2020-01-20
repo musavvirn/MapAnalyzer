@@ -6,45 +6,11 @@ import cv2
 from collections import Counter
 from skimage.color import rgb2lab, deltaE_cie76
 import os
+from color_constants import COLORS_RGB_2
+from color_constants import COLORS_HEX
 
-class Map:
-    id = 0
-    name = ""
-    size = ""
-    players = 0
-    imgSize = ""
-    color = []
+IMG = "img1.jpg"
 
-    def __init__(self, id, name, size, players):
-        self.id = id
-        self.name = name
-        self.size = size
-        self.players = players
-        print("Map created: " + self.name)
-
-    def getDetails(self):
-        print(self.name + " " + self.size + " " + str(self.players))
-
-    def setColors(self, color):
-        if (len(color) == self.players):
-            for c in color:
-                self.color.append(c)
-            print(self.color)
-        else:
-            print("Number of colors must match the player count!")
-
-IMG = "d.png"
-
-BLUE = "#0000FF"
-RED = "#FF0000"
-GREEN = "#00FF00"
-YELLOW = "#FAFF11"
-TEAL = "#0CFEF0"
-PURPLE = "#F00AF1"
-GREY = "#3F4243"
-ORANGE = "#FB8200"
-
-COLORS_HEX = [BLUE, RED, GREEN, YELLOW, TEAL, PURPLE, GREY, ORANGE]
 IMG_RGB = []
 
 image = cv2.imread(IMG)
@@ -142,32 +108,8 @@ COLORS_RGB = [
     hex_to_rgb(ORANGE)
 ]
 
-COLORS_RGB_2 = [
-    (0,0,255),
-    (255,0,0),
-    (0,255,0),
-    (255,255,0),
-    (0,255,255),
-    (255,0,255),
-    hex_to_rgb(GREY),
-    hex_to_rgb(ORANGE)
-]
-
-print(COLORS_RGB)
 print(COLORS_RGB_2)
 
-# COLORS_RGB = {
-#     'BLUE': hex_to_rgb(BLUE),
-#     'RED' : hex_to_rgb(RED),
-#     'GREEN': hex_to_rgb(GREEN),
-#     'YELLOW': hex_to_rgb(YELLOW),
-#     'TEAL': hex_to_rgb(TEAL),
-#     'PURPLE': hex_to_rgb(PURPLE),
-#     'GREY': hex_to_rgb(GREY),
-#     'ORANGE': hex_to_rgb(ORANGE)
-# }
-
-# print(COLORS_RGB)
 def compare_rgb(IMG_RGB):
     print(IMG_RGB)
     for c in COLORS_RGB_2:
