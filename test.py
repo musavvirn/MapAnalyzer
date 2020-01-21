@@ -9,7 +9,7 @@ import os
 from color_constants import COLORS_RGB_2
 from color_constants import COLORS_HEX
 
-IMG = "img1.jpg"
+IMG = "img0.bmp"
 
 IMG_RGB = []
 
@@ -49,9 +49,9 @@ for i in rgb_map:
         pie[4] += 1
     if (compare_rgb_2(i, [255, 0, 255])):
         pie[5] += 1
-    if (compare_rgb_2(i, [255, 200, 255])):
+    if (compare_rgb_2(i, [66,0,66])):
         pie[6] += 1
-    if (compare_rgb_2(i, [255, 100, 255])):
+    if (compare_rgb_2(i, [255,130,0])):
         pie[7] += 1
 
 print(pie)
@@ -97,16 +97,16 @@ def get_hex(ordered_colors, counts):
     return hex
 
 
-COLORS_RGB = [
-    hex_to_rgb(BLUE),
-    hex_to_rgb(RED),
-    hex_to_rgb(GREEN),
-    hex_to_rgb(YELLOW),
-    hex_to_rgb(TEAL),
-    hex_to_rgb(PURPLE),
-    hex_to_rgb(GREY),
-    hex_to_rgb(ORANGE)
-]
+# COLORS_RGB = [
+#     hex_to_rgb(BLUE),
+#     hex_to_rgb(RED),
+#     hex_to_rgb(GREEN),
+#     hex_to_rgb(YELLOW),
+#     hex_to_rgb(TEAL),
+#     hex_to_rgb(PURPLE),
+#     hex_to_rgb(GREY),
+#     hex_to_rgb(ORANGE)
+# ]
 
 print(COLORS_RGB_2)
 
