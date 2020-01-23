@@ -1,4 +1,3 @@
-
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,14 +7,14 @@ from skimage.color import rgb2lab, deltaE_cie76
 import os
 from color_constants import COLORS_RGB_2
 from color_constants import COLORS_HEX
+from cv2_template_matching import map_match
 
 IMG = "img0.bmp"
-
+IMG_2 = "fullimg1.bmp"
 IMG_RGB = []
 
 image = cv2.imread(IMG)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
 
 rgb_map = []
 for i in range(0, image.shape[1]):
@@ -165,10 +164,15 @@ def get_colors(image, number_of_colors, show_chart):
         plt.show()
     return rgb_colors
 
-get_colors(get_image(IMG), 2, True)
-print(IMG_RGB)
-
-compare_rgb()
+# get_colors(get_image(IMG), 2, True)
+# print(IMG_RGB)
+# compare_rgb()
+xy = map_match(IMG_2)
+print(xy)
+crop_img = cv2.imread(IMG_2)[xy[1]:xy[1]+xy[3], xy[0]:xy[0]+xy[2]]
+cv2.imshow("cropped", crop_img)
+cv2.imwrite("cropped.png", crop_img)
+cv2.waitKey(0)
 
 
 
