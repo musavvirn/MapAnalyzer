@@ -1,13 +1,13 @@
-BLUE = "#0000FF"
-RED = "#FF0000"
-GREEN = "#00FF00"
-YELLOW = "#FAFF11"
-TEAL = "#0CFEF0"
-PURPLE = "#F00AF1"
-GREY = "#3F4243"
-ORANGE = "#FB8200"
+_1_BLUE = "#0000FF"
+_2_RED = "#FF0000"
+_3_GREEN = "#00FF00"
+_4_YELLOW = "#FAFF11"
+_5_TEAL = "#0CFEF0"
+_6_PURPLE = "#F00AF1"
+_7_GREY = "#3F4243"
+_8_ORANGE = "#FB8200"
 
-COLORS_HEX = [BLUE, RED, GREEN, YELLOW, TEAL, PURPLE, GREY, ORANGE]
+COLORS_HEX = [_1_BLUE, _2_RED, _3_GREEN, _4_YELLOW, _5_TEAL, _6_PURPLE, _7_GREY, _8_ORANGE]
 
 
 COLORS_RGB_2 = [
@@ -28,7 +28,7 @@ YELLOW = (255,255,0)
 TEAL = (0,255,255)
 PURPLE = (255,0,255)
 GREY = (67,67,67) ## -- ! might conflic with minimap panel colours color -- measured: 3100-3300 points
-ORANGE = (255,130,0) ## -- ! might conflic with minimap military/civilian button color -- measured: 200 points
+ORANGE = (255,130,0) ## -- ! might conflic with minimap military/civilian button color -- measured: 40 points
 
 WHITE = (255,255,255)   ## -- relic ! might conflic with minimap stats button color
 GOLD = (255,199,0) ## -- gold
